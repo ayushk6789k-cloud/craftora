@@ -1,0 +1,6 @@
+{
+  "name": "Craftora - Handcrafted Accessories Marketplace",
+  "description": "A multi-vendor handcrafted accessories marketplace connecting student and local artisans with conscious consumers. Features inventory management, artisan storefronts, order tracking, and business analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
