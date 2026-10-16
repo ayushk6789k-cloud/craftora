@@ -162,6 +162,15 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                     src={img.image_url}
                     alt={product.name}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallbackApplied) {
+                        target.dataset.fallbackApplied = 'true';
+                        target.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&auto=format&fit=crop&q=80';
+                      }
+                    }}
                   />
                 </button>
               ))}
@@ -174,6 +183,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               src={images[activeImageIndex]?.image_url || images[0].image_url}
               alt={product.name}
               className="w-full h-full object-cover object-center"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.dataset.fallbackApplied) {
+                  target.dataset.fallbackApplied = 'true';
+                  target.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&auto=format&fit=crop&q=80';
+                }
+              }}
             />
             {discountPercent > 0 && (
               <span className="absolute top-4 left-4 bg-[#B77948] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">

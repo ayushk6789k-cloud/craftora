@@ -70,6 +70,15 @@ export const ArtisansPage: React.FC<ArtisansPageProps> = ({ onSelectArtisan, onN
                   src={artisan.banner_url}
                   alt={artisan.store_name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.fallbackApplied) {
+                      target.dataset.fallbackApplied = 'true';
+                      target.src = 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=80';
+                    }
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
               </div>
@@ -83,6 +92,15 @@ export const ArtisansPage: React.FC<ArtisansPageProps> = ({ onSelectArtisan, onN
                       src={artisan.logo_url}
                       alt={artisan.store_name}
                       className="w-20 h-20 rounded-2xl object-cover border-4 border-white shadow-md bg-white"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallbackApplied) {
+                          target.dataset.fallbackApplied = 'true';
+                          target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80';
+                        }
+                      }}
                     />
                   </div>
 

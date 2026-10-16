@@ -58,6 +58,15 @@ export const ArtisanStorefrontPage: React.FC<ArtisanStorefrontPageProps> = ({
           }
           alt={store?.store_name || 'Artisan Studio'}
           className="w-full h-full object-cover"
+          loading="lazy"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.dataset.fallbackApplied) {
+              target.dataset.fallbackApplied = 'true';
+              target.src = 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&auto=format&fit=crop&q=80';
+            }
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
@@ -82,6 +91,15 @@ export const ArtisanStorefrontPage: React.FC<ArtisanStorefrontPageProps> = ({
               }
               alt={store?.store_name}
               className="w-28 h-28 rounded-3xl object-cover border-4 border-white shadow-xl bg-white"
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.dataset.fallbackApplied) {
+                  target.dataset.fallbackApplied = 'true';
+                  target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80';
+                }
+              }}
             />
             <div className="space-y-1">
               <div className="flex items-center gap-2">

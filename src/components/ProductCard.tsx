@@ -54,6 +54,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
           alt={product.name}
           className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.dataset.fallbackApplied) {
+              target.dataset.fallbackApplied = 'true';
+              target.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&auto=format&fit=crop&q=80';
+            }
+          }}
         />
 
         {/* Badges */}

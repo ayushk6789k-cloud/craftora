@@ -134,7 +134,7 @@ class MarketplaceDataStore {
         name: 'Traditional Crafts',
         slug: 'traditional-accessories',
         description: 'Heritage lost-wax Dokra brass filigree, meenakari jewelry, and tribal metalwork.',
-        image_url: 'https://images.unsplash.com/photo-1611591475155-426c04a29c01?w=600&auto=format&fit=crop&q=80',
+        image_url: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&auto=format&fit=crop&q=80',
         display_order: 6,
         is_active: true,
         created_at: new Date().toISOString(),
@@ -468,7 +468,7 @@ class MarketplaceDataStore {
       {
         id: '33333333-3333-4333-8333-333333333601',
         product_id: '22222222-2222-4222-8222-222222222206',
-        image_url: 'https://images.unsplash.com/photo-1611591475155-426c04a29c01?w=800&auto=format&fit=crop&q=80',
+        image_url: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&auto=format&fit=crop&q=80',
         alt_text: 'Dokra Brass Bangle',
         is_primary: true,
         display_order: 1,

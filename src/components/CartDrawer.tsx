@@ -133,6 +133,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       src={img}
                       alt={prod?.name || 'Product'}
                       className="w-20 h-20 rounded-xl object-cover border border-[#D9B99B]/30 bg-[#FAF7F2]"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallbackApplied) {
+                          target.dataset.fallbackApplied = 'true';
+                          target.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&auto=format&fit=crop&q=80';
+                        }
+                      }}
                     />
 
                     {/* Details */}

@@ -101,6 +101,15 @@ export const CartPage: React.FC<CartPageProps> = ({ onProceedToCheckout, onExplo
                     src={img}
                     alt={prod?.name}
                     className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border border-[#D9B99B]/30 bg-[#FAF7F2] shrink-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallbackApplied) {
+                        target.dataset.fallbackApplied = 'true';
+                        target.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&auto=format&fit=crop&q=80';
+                      }
+                    }}
                   />
 
                   <div className="flex-1 flex flex-col justify-between">
