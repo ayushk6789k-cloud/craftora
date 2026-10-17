@@ -3,7 +3,6 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { CartProvider } from './contexts/CartContext';
 import { WishlistProvider } from './contexts/WishlistContext';
 import { Navbar } from './components/Navbar';
-import { DatabaseStatusBanner } from './components/DatabaseStatusBanner';
 import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
 import { HomePage } from './pages/HomePage';
@@ -101,9 +100,6 @@ function MainApp() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#29231F] selection:bg-[#7A4B35]/20 selection:text-[#7A4B35]">
-      {/* Live Supabase PostgreSQL Connection Status */}
-      <DatabaseStatusBanner />
-
       {/* Top Navigation */}
       <Navbar
         currentRoute={currentRoute}

@@ -56,19 +56,19 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#D9B99B]/35">
-      {/* Top Academic Department Announcement Bar */}
+      {/* Top Marketplace Announcement Bar */}
       <div className="bg-[#7A4B35] text-[#FAF7F2] text-xs py-1.5 px-4 font-medium flex items-center justify-between">
         <div className="max-w-7xl mx-auto w-full flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <span className="bg-[#B77948] px-2 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider">
-              Interdisciplinary College Marketplace
+            <span className="bg-[#B77948] px-2.5 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider">
+              Artisan Direct
             </span>
-            <span className="hidden md:inline text-white/85">
-              Engineering & Tech (ET) • Fashion Design (FD) • Management (MGT)
+            <span className="text-white/90 text-xs">
+              Handcrafted accessories made with ethically sourced materials • Free shipping on orders over ₹999
             </span>
           </div>
 
-          {/* Genuine Auth Status Banner (Requirement 1 & 13) */}
+          {/* Genuine Auth Status Banner */}
           <div className="flex items-center gap-3 text-xs">
             {user ? (
               <div className="flex items-center gap-2">
@@ -308,19 +308,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                     </button>
                   )}
 
-                  {/* Admin Portal */}
-                  {user.role === 'admin' && (
-                    <button
-                      id="menu-admin-btn"
-                      onClick={() => {
-                        onNavigate('admin');
-                        setUserDropdownOpen(false);
-                      }}
-                      className="w-full text-left px-4 py-2 text-xs font-medium text-purple-800 hover:bg-purple-50 flex items-center gap-2 cursor-pointer"
-                    >
-                      <ShieldCheck size={14} /> Admin Overview (ET)
-                    </button>
-                  )}
+                    {/* Admin Portal */}
+                    {user.role === 'admin' && (
+                      <button
+                        id="menu-admin-btn"
+                        onClick={() => {
+                          onNavigate('admin');
+                          setUserDropdownOpen(false);
+                        }}
+                        className="w-full text-left px-4 py-2 text-xs font-semibold text-purple-900 hover:bg-purple-50 flex items-center gap-2 cursor-pointer"
+                      >
+                        <ShieldCheck size={14} className="text-purple-700" /> Admin Control Panel
+                      </button>
+                    )}
 
                   <div className="border-t border-neutral-100 mt-1.5 pt-1.5">
                     <button

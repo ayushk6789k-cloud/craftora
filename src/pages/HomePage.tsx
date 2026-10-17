@@ -77,19 +77,19 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Copy */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#7A4B35]/10 text-[#7A4B35] text-xs font-semibold border border-[#7A4B35]/20">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#7A4B35]/10 text-[#7A4B35] text-xs font-semibold border border-[#7A4B35]/20">
                 <Sparkles size={14} className="text-[#B77948]" />
-                <span>Interdisciplinary Handcrafted Marketplace</span>
+                <span>Authentic Handcrafted Accessories Marketplace</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#29231F] leading-[1.12] tracking-tight">
-                Authentic accessories, <br />
-                <span className="text-[#7A4B35] italic font-serif">handcrafted</span> by student artisans.
+                Unique accessories, <br />
+                <span className="text-[#7A4B35] italic font-serif">handcrafted</span> by independent artisans.
               </h1>
 
               <p className="text-base sm:text-lg text-[#29231F]/80 max-w-xl leading-relaxed">
-                Connect directly with campus creators and regional craftspersons. Every earring, tote,
-                and leather clutch is handmade in micro-batches with ethical natural materials.
+                Connect directly with regional craftspersons and independent creators. Every piece of jewelry,
+                hand-woven bag, and clutch is created in micro-batches with natural, ethical materials.
               </p>
 
               {/* Action Buttons */}
@@ -107,7 +107,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   onClick={() => onNavigate('artisans')}
                   className="bg-white hover:bg-[#FAF7F2] text-[#29231F] border border-[#D9B99B] px-6 py-3.5 rounded-2xl text-sm font-semibold transition cursor-pointer"
                 >
-                  Meet Student Creators
+                  Meet Featured Artisans
                 </button>
               </div>
 
@@ -141,10 +141,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 text-white">
                     <span className="text-[11px] font-bold uppercase tracking-widest text-amber-300">
-                      Artisan Spotlight
+                      Master Artisan Spotlight
                     </span>
                     <p className="font-display text-lg font-bold">Mitti & Clay Studio</p>
-                    <p className="text-xs text-white/80">By Ananya Sharma (Fashion Design '26)</p>
+                    <p className="text-xs text-white/80">Hand-thrown terracotta & mineral pigments</p>
                   </div>
                 </div>
 
@@ -154,8 +154,8 @@ export const HomePage: React.FC<HomePageProps> = ({
                     <Award size={22} />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-[#29231F]">Campus Certified</p>
-                    <p className="text-[10px] text-[#29231F]/70">Fashion Design Lab Verified</p>
+                    <p className="text-xs font-bold text-[#29231F]">Artisan Verified</p>
+                    <p className="text-[10px] text-[#29231F]/70">100% Genuine Handcrafted Guarantee</p>
                   </div>
                 </div>
               </div>

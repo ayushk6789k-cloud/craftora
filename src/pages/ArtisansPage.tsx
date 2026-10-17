@@ -42,10 +42,10 @@ export const ArtisansPage: React.FC<ArtisansPageProps> = ({ onSelectArtisan, onN
           Our Creative Community
         </span>
         <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#29231F] mt-1">
-          Student & Regional Artisans
+          Master & Independent Artisans
         </h1>
         <p className="text-xs sm:text-sm text-[#29231F]/70 mt-2 leading-relaxed">
-          Craftora bridges aspiring Fashion Design students and generational handicraft artisans directly with conscious buyers. Every piece preserves traditional making skills and supports ethical livelihoods.
+          Craftora bridges master craftspersons and independent studios directly with conscious collectors. Every piece preserves generational handicraft techniques and supports ethical artisan livelihoods.
         </p>
       </div>
 

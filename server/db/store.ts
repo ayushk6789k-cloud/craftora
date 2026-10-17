@@ -145,6 +145,17 @@ class MarketplaceDataStore {
     // 2. Profiles (Default test accounts with BCrypt-style placeholder or direct login check)
     this.profiles = [
       {
+        id: 'c01769ee-7ce9-491d-a441-fe3294f908ea',
+        email: 'ayushk6789k@gmail.com',
+        full_name: 'Ayush',
+        phone: '6387583600',
+        role: 'admin',
+        bio: 'Platform Administrator & Marketplace Lead.',
+        avatar_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80',
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      },
+      {
         id: 'u1111111-1111-1111-1111-111111111101',
         email: 'admin@craftora.com',
         full_name: 'Devansh Sharma',

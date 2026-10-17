@@ -5,6 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useWishlist } from '../contexts/WishlistContext';
 import { useCart } from '../contexts/CartContext';
 import { apiRequest } from '../services/api';
+import { printOrderReceipt } from '../utils/receiptPrinter';
 
 interface AccountPageProps {
   initialTab?: 'orders' | 'wishlist' | 'profile' | 'apply';
@@ -352,6 +353,15 @@ export const AccountPage: React.FC<AccountPageProps> = ({
                       src={p.images?.[0]?.image_url || 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=200'}
                       alt={p.name}
                       className="w-20 h-20 rounded-xl object-cover bg-[#FAF7F2]"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallbackApplied) {
+                          target.dataset.fallbackApplied = 'true';
+                          target.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=200';
+                        }
+                      }}
                     />
                     <div className="flex-1 min-w-0">
                       <span className="text-[10px] font-semibold text-[#7A4B35] uppercase">
@@ -646,7 +656,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({
             {/* Actions */}
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-neutral-100">
               <button
-                onClick={() => window.print()}
+                onClick={() => printOrderReceipt(selectedReceiptOrder)}
                 className="bg-neutral-800 hover:bg-neutral-900 text-white px-5 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 transition cursor-pointer"
               >
                 <Printer size={14} /> Print Receipt

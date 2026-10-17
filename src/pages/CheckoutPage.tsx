@@ -469,6 +469,15 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
                       }
                       alt={item.product?.name}
                       className="w-10 h-10 rounded-lg object-cover bg-[#FAF7F2] shrink-0"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallbackApplied) {
+                          target.dataset.fallbackApplied = 'true';
+                          target.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100';
+                        }
+                      }}
                     />
                     <div className="min-w-0">
                       <p className="font-semibold text-[#29231F] truncate">{item.product?.name}</p>

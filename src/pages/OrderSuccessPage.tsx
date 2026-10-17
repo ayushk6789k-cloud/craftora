@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { CheckCircle2, Package, Printer, Truck, Home, Database, ShieldCheck } from 'lucide-react';
 import { Order, formatPaise } from '../types';
 import { apiRequest } from '../services/api';
+import { printOrderReceipt } from '../utils/receiptPrinter';
 
 interface OrderSuccessPageProps {
   orderId: string;
@@ -36,7 +37,11 @@ export const OrderSuccessPage: React.FC<OrderSuccessPageProps> = ({
   }, [orderId]);
 
   const handlePrintReceipt = () => {
-    window.print();
+    if (order) {
+      printOrderReceipt(order);
+    } else {
+      window.print();
+    }
   };
 
   return (
