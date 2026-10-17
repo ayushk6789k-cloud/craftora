@@ -6,7 +6,7 @@ const supabaseUrl = rawUrl.replace(/\/rest\/v1\/?$/, '').replace(/\/+$/, '');
 const supabaseAnonKey = (
   import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
   import.meta.env.VITE_SUPABASE_ANON_KEY ||
-  ''
+  'sb_publishable_nPggHpU8Vo_JgTpzCI1QEw_GUUny_R1'
 ).trim();
 
 export const isSupabaseConfigured = Boolean(
